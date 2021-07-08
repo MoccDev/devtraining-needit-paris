@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Load requested for email value based on requested for value</description>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>NeedIt Populate Email Field OnLoad</name>
+        <order/>
+        <script><![CDATA[function onLoad() 
+{
+	var gRecord = new GlideRecord('sys_user');
+	alert('qui');
+	var userId = g_form.getValue('u_requested_for');
+	alert('qui');
+	
+	var user = gRecord.get(userId);
+	var email = user.email + '';
+	
+	g_form.setValue('u_requested_for_email', email);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-08 08:01:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4f3fca901b1130108ad21f4a234bcbc2</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>NeedIt Populate Email Field OnLoad</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_client_4f3fca901b1130108ad21f4a234bcbc2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-08 08:05:54</sys_updated_on>
+        <table>x_58872_needit_needit</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>e03076f5db3768109a4dcac505961926</instance_id>
+        <instance_name>dev112811</instance_name>
+        <name>sys_script_client_4f3fca901b1130108ad21f4a234bcbc2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Load requested for email value based on requested for value&lt;/description&gt;&lt;field&gt;active&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;NeedIt Populate Email Field OnLoad&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() 
+{
+	var gRecord = new GlideRecord('sys_user');
+	alert('qui');
+	var userId = g_form.getValue('u_requested_for');
+	alert('qui');
+	
+	var user = gRecord.get(userId);
+	var email = user.email + '';
+	
+	g_form.setValue('u_requested_for_email', email);
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-07-08 08:01:21&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;4f3fca901b1130108ad21f4a234bcbc2&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;NeedIt Populate Email Field OnLoad&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_4f3fca901b1130108ad21f4a234bcbc2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-07-08 08:05:54&lt;/sys_updated_on&gt;&lt;table&gt;x_58872_needit_needit&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>368419836</payload_hash>
+        <record_name>NeedIt Populate Email Field OnLoad</record_name>
+        <reverted_from/>
+        <source>595437d61bcd30108ad21f4a234bcb51</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-08 08:05:54</sys_created_on>
+        <sys_id>d3c196d41b1130108ad21f4a234bcb17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17a8526dc510000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-08 08:05:54</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>1fc196d46c113010b344ee644a904316</update_guid>
+        <update_guid_history>1fc196d46c113010b344ee644a904316:368419836,be9196d4cc1130100b9f6eec38adc510:-583483957,c1611e947211301050fef2bdccac60a8:-397411370,38c0121453113010fedfa91e768a5e51:-959967584</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-08 08:10:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>abe23204be644d94907e5d77d47c1da1</sys_id>
+        <sys_metadata>4f3fca901b1130108ad21f4a234bcbc2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NeedIt Populate Email Field OnLoad</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent display_value="NeedIt">abb2186e1b0170108ad21f4a234bcb82</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_script_client_4f3fca901b1130108ad21f4a234bcbc2</sys_update_name>
+        <sys_update_version display_value="sys_script_client_4f3fca901b1130108ad21f4a234bcbc2">d3c196d41b1130108ad21f4a234bcb17</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-08 08:10:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
